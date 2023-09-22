@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
 
   <!-- nodes -->
 
@@ -9,7 +10,7 @@
 
   <!-- nodes -->
 
-<SEQUENCE NAME="%profession%==&#39;devloper&#39;" TIMEOUT="" EXIT-ON="SUCCESS">
+<SEQUENCE NAME="%profession%==&#39;devloper&#39;" TIMEOUT="" EXIT-ON="FAILURE">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -401,4 +402,8 @@
 </MAP>
 </SEQUENCE>
 </BRANCH>
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:debugLog" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+</INVOKE>
 </FLOW>
